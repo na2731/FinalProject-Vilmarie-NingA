@@ -23,27 +23,14 @@ public class TableActivity extends AppCompatActivity { //implements View.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
-        //TABLE1.setOnClickListener(this);
 
-        SimpleDateFormat formatter = new SimpleDateFormat("hh:mm");
-      //  TABLE1.setOnClickListener(this);
-
-
-
-
+        Data.Init();
 
         System.out.println("ChuanBuGuoQuDe" + date1);
         System.out.println("ChuanBuGuoQuDe" + date2);
 
 
-
-
-
-        if(Data.isConflict(date1,date2) == false){
-            //Data.addTime(date1,date2);
-            //Data.getAllTime();
-        }
-        else {
+        if(Data.isConflict(date1,date2,0)){
             ImageView table1=(ImageView)findViewById(R.id.table1);
             table1.setImageResource(R.drawable.rec); //plot block with red
         }
@@ -53,8 +40,8 @@ public class TableActivity extends AppCompatActivity { //implements View.OnClick
         TABLE2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Data.isConflict(date1,date2) == false) {
-                    Data.addTime(date1,date2);
+                if(Data.isConflict(date1,date2,0) == false) {
+                    Data.addTime(date1,date2, 0);
                     TABLE2.setImageResource(R.drawable.rec2);
                 }
                 else{
@@ -68,3 +55,6 @@ public class TableActivity extends AppCompatActivity { //implements View.OnClick
     }
 
 }
+
+
+//  SimpleDateFormat formatter = new SimpleDateFormat("hh:mm");

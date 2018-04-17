@@ -1,21 +1,27 @@
 package com.example.android.finalproject_ningavimarie;
 
+import android.app.ActionBar;
 import android.support.v4.widget.ImageViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class TableActivity extends AppCompatActivity {
-    private ImageView TABLE1;
+import android.view.View.OnClickListener;
+
+public class TableActivity extends AppCompatActivity { //implements View.OnClickListener {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
+        //TABLE1.setOnClickListener(this);
 
         SimpleDateFormat formatter = new SimpleDateFormat("hh:mm");
       //  TABLE1.setOnClickListener(this);
@@ -42,6 +48,20 @@ public class TableActivity extends AppCompatActivity {
 
         }
 
+
+        final ImageView TABLE2=(ImageView)findViewById(R.id.table1);
+        TABLE2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Toast.makeText(TableActivity.this,
+//                        "The favorite list would appear on clicking this icon",
+//                        Toast.LENGTH_LONG).show();
+                TABLE2.setImageResource(R.drawable.rec2);
+            }
+        });
+
+
+
         //public void table1.onclicklinstern(){}
         //if(image==red.png){toggle: unavaiable}
         //else if (image==white.png){set image}
@@ -63,5 +83,9 @@ public class TableActivity extends AppCompatActivity {
 //        }
     }
 
-
+//
+//    @Override
+//    public void onClick(View view) {
+//
+//    }
 }

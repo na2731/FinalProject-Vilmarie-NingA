@@ -77,12 +77,15 @@ public class Reservation extends AppCompatActivity {
             Data.sendDate2(date2);
 
 
-            startActivity(i);
+
 
             if (date1.compareTo(date2) >= 0) {
                 //Error
                 Toast.makeText(this,"error",Toast.LENGTH_SHORT).show();
                 return;
+            }
+            else{
+                startActivity(i);
             }
 
         }catch (ParseException e1){

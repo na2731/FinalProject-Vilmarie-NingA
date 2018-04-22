@@ -15,7 +15,7 @@ import java.util.Date;
 public class Data {
 
     public static ArrayList<ArrayList<Date>> timeArrays = new ArrayList<ArrayList<Date>>();
-    public static boolean[] TableAvailable = new boolean[3];
+    public static boolean[] TableAvailable = new boolean[14];
     public static Date chuanbuguoqu1 = new Date();
     public static Date chuanbuguoqu2 = new Date();
     public static boolean alreadyExecuted = false;
@@ -23,7 +23,7 @@ public class Data {
     public static void Init(){
         //Initialize the 2D Arraylist of time
         if(!alreadyExecuted) {
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 14; i++) {
                 timeArrays.add(new ArrayList<Date>());
             }
             Arrays.fill(TableAvailable, true);

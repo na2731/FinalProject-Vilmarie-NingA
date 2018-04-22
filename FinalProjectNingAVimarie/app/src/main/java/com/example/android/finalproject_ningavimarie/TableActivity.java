@@ -98,26 +98,26 @@ public class TableActivity extends AppCompatActivity { //implements View.OnClick
 
 
 //        ////
-//        if(Data.isConflict(date1,date2,3)){
-//            ImageView table3=(ImageView)findViewById(R.id.table4);
-//            table3.setImageResource(R.drawable.rec); //plot block with red
-//        }
-////
-//        final ImageView TABLE4=(ImageView)findViewById(R.id.table4);
-//        TABLE4.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(Data.isConflict(date1,date2,3) == false) {
-//                    Data.addTime(date1,date2, 3);
-//                    TABLE4.setImageResource(R.drawable.rec2);
-//                }
-//                else{
-//                    Toast.makeText(TableActivity.this,
-//                            "This Table is Unavailable!",
-//                            Toast.LENGTH_LONG).show();
-//                }
-//            }
-//        });
+        if(Data.isConflict(date1,date2,3)){
+            ImageView table=(ImageView)findViewById(R.id.table4);
+            table.setImageResource(R.drawable.rec); //plot block with red
+        }
+//
+        final ImageView TABLE4=(ImageView)findViewById(R.id.table4);
+        TABLE4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(Data.isConflict(date1,date2,3) == false) {
+                    Data.addTime(date1,date2, 3);
+                    TABLE4.setImageResource(R.drawable.rec2);
+                }
+                else{
+                    Toast.makeText(TableActivity.this,
+                            "This Table is Unavailable!",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
     }
 

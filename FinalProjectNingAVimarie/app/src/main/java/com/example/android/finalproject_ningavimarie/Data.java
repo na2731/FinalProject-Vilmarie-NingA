@@ -23,7 +23,7 @@ public class Data {
     public static void Init(){
         //Initialize the 2D Arraylist of time
         if(!alreadyExecuted) {
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < 10; i++) {
                 timeArrays.add(new ArrayList<Date>());
             }
             Arrays.fill(TableAvailable, true);

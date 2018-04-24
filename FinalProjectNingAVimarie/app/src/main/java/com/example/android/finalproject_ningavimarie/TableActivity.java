@@ -26,7 +26,6 @@ public class TableActivity extends AppCompatActivity { //implements View.OnClick
     final TableTracker tracker = new TableTracker();
 
     public void Confirm(View view){
-        Log.i("Confirm -------------------", "Confirm -------------------");
         int Val = Validate();
         if(Val == 1) {
             for (int i = 0; i < tracker.value.length; i++) {

@@ -162,10 +162,10 @@
                 android:text="Entraince" />
 
             <Button
-                android:onClick="Confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CONFIRM"/>
+                android:onClick="Confirm"
+                android:text="CONFIRM" />
         </LinearLayout>
 
 
